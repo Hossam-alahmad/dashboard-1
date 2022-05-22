@@ -1,0 +1,82 @@
+@tailwind base;
+@font-face {
+    font-family: "Poppins-Medium";
+    src: url("./assets/Fonts/Poppins-Medium.ttf");
+}
+@layer base {
+    * {
+        @apply font-["Poppins-Medium"];
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        @apply font-bold;
+    }
+    h1 {
+        @apply text-3xl lg:text-5xl;
+    }
+    h2 {
+        @apply text-2xl lg:text-4xl;
+    }
+    h3 {
+        @apply text-xl lg:text-3xl;
+    }
+    h4 {
+        @apply text-lg lg:text-2xl;
+    }
+    h5 {
+        @apply text-[1.1rem] lg:text-xl;
+    }
+    h6 {
+        @apply text-[1rem] lg:text-lg;
+    }
+    li {
+        @apply p-2;
+    }
+}
+@tailwind components;
+@layer components {
+    .active {
+        @apply bg-pr-color text-white;
+    }
+    .notify {
+        @apply before:absolute before:top-1 before:right-1 before:text-sm before:w-[20px] before:rounded-full before:bg-pr-color before:text-white;
+    }
+    .dark-theme {
+        @apply dark:bg-pr-bg-dark dark:text-txt-color-dark transition-all;
+    }
+}
+@tailwind utilities;
+
+:root {
+    --primary-bg: #fff;
+    --second-bg: #fafafb;
+    --txt-color: #455560;
+    --main-color: #349eff;
+    --second-color: #62b4ff;
+
+    --main-color-blue: #349eff;
+    --second-color-blue: #32b4ff;
+
+    --main-color-red: #fb0b12;
+    --second-color-red: #ff4a6b;
+
+    --main-color-cyan: #10d4d2;
+    --second-color-cyan: #2ae9e6;
+
+    --main-color-green: #019707;
+    --second-color-green: #4caf50;
+
+    --main-color-orange: #d68102;
+    --second-color-orange: #fca11a;
+
+    /* theme dark colors */
+    --primary-bg-dark: #2d2d2d;
+    --second-bg-dark: #202020;
+    --txt-color-dark: #bbb;
+    --shadow-color-dark: rgb(0, 0, 0, 0.2);
+}
